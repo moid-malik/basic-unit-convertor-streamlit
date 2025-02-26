@@ -1,7 +1,6 @@
 import streamlit as st
 import google.generativeai as genai
 
-# Set page configuration at the very beginning
 st.set_page_config(page_title="Smart Converter & AI", layout="wide")
 
 def initialize_gemini():
@@ -57,22 +56,27 @@ def main():
             }
             /* Widget text color overrides using data-testid selectors */
             div[data-testid="stTextInput"] * {
-                color: #222 !important;
+                color: #fff !important;
             }
             div[data-testid="stNumberInput"] * {
-                color: #222 !important;
+                color: #fff !important;
             }
             div[data-testid="stSelectbox"] * {
-                color: #222 !important;
+                color: #fff !important;
             }
             div[data-testid="stTextArea"] * {
-                color: #222 !important;
+                color: #fff !important;
             }
-            /* Ensure text areas have a white background */
             div[data-testid="stTextArea"] textarea {
                 background-color: #fff !important;
-                color: #222 !important;
+                color: #111 !important;
             }
+            div[data-testid="stTextInput"] input,
+            div[data-testid="stNumberInput"] input,
+            div[data-testid="stSelectbox"] select {
+                color: #111 !important;
+            }
+
         </style>
         """,
         unsafe_allow_html=True
